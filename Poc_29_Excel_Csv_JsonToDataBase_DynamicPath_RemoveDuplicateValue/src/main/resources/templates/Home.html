@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="ISO-8859-1">
+<title>document</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<h3>WELCOME TO DOCUMENT PAGE</h3>
+<body>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<h3>FileUpload</h3>
+<form   th:action="@{'/fileupload'}" th:object="${clientUser}" method="POST" enctype='multipart/form-data'> 
+  <div class="form-group">
+    <label for="file">File upload (EXCEL OR CSV OR JSON)</label>
+    <input type="file" class="form-control"  id="file" name="fileobj" th:field="*{file}">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+<div class="col-md-12">
+<h2>ALL CLIENT DATA</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>CLIENT</th>
+        <th>CLIENTNAME</th>
+        <th>CLIENTTYPE</th>
+        <th>ACCOUNTTYPE</th>
+        <th>ACCOUNT OPEN DATE</th>
+        <th>INTERMEDIARYNAME</th>
+        <th>SCHEMENAME</th>
+        <th>RELMGRNAME</th>
+        <th>BILLGROUP</th>
+        <th>% SHARE</th>
+        <th>FILE TYPE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="client :${clientUser}">
+        <td th:text="${client.client}">John</td>
+        <td th:text="${client.name}">Doe</td>
+        <td th:text="${client.cliCode}">Doe</td>
+        <td th:text="${client.cliType}">Doe</td>
+        <td th:text="${client.accType}">Doe</td>
+        <td th:text="${client.date}">Doe</td>
+        <td th:text="${client.iNameType}">Doe</td>
+        <td th:text="${client.schName}">Doe</td>
+        <td th:text="${client.RegMgName}">Doe</td>
+        <td th:text="${client.billGroup}">Doe</td>
+        <td th:text="${client.share}">Doe</td>
+        <td th:text="${client.file}">Doe</td>
+      </tr>
+     
+    
+    </tbody>
+  </table>
+
+
+</div>
+
+</div>
+</div>
+
+
+
+
+<!-- <form th:action="@{/documents/save}" method="POST" enctype="multipart/form-data">
+<pre>
+  ID :<input type="text" name="fileId"/><br>
+File :<input type="file" name="fileObj"/><br>
+      <input type="submit" value="upload"/>
+
+</pre>
+</form> -->
+</body>
+</html>
