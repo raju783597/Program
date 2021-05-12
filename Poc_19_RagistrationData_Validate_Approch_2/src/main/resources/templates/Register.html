@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>
+       Registration Page
+    </title>
+    <style>
+    h3{ text-align: center;
+    }
+    
+    </style>
+</head>
+<body>
+    
+    <h3>WELCOME TO SINUP PAGE</h3>
+  <form action="save" method="POST">
+ <pre>
+Name              <input type="text" name="name">
+
+LastName          <input type="text" name="lastName">
+
+Gender            <input type="radio" name="gender" value="male"/> Male 
+                  <input type="radio" name="gender" value="female"/>Female   
+                  <input type="radio" name="gender" value="other"/> Other 
+
+Dob               <input type="date" name="dob">
+
+Email             <input type="text" name="email">
+
+Phone No          <input type="text" name="phoNo">
+
+Password          <input type="password" name="passward">
+
+Conform Password  <input type="password" name="conformPassward">
+
+      <input type="submit" value="Create Value"/>
+      </pre>  
+</form>
+<samp th:text="${massage}"></samp>
+
+</body>
+
+</html>
