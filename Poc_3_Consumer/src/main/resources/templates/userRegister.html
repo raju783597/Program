@@ -1,0 +1,21 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>userpage</title>
+</head>
+<body>
+<form>
+<h2>Welcome to Register</h2>
+<form th:action="@{/user/save}" method="POST" th:object="${user}">
+<pre>
+
+NAME       :<input type="text" th:field="*{userName}">
+DEGIGNATION:<input type="text" th:field="*{userDegigNation}">
+</pre>
+<input type="submit" value="Register">
+</form>
+<!-- read the data from model memory -->
+</form>
+<samp th:text="${msg}"></samp>
+
+</body>
+</html>

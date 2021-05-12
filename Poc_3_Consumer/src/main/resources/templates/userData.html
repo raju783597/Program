@@ -1,0 +1,31 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>data</title>
+</head>
+<body class="">
+		<h2>DETAIL DATA PAGE</h2>
+	<form action="all" method="get">
+
+		<table border="1">
+			<tr>
+				<th>NO</th>
+				<th>NAME</th>
+				<th>DEGIGNATION</th>
+				<th>OPERATION</th>
+			</tr>
+			<tr th:each="ob:${list}">
+			<td th:text="${ob.id}"></td>
+			<td th:text="${ob.userName}"></td>
+			<td th:text="${ob.userDegigNation}"></td>
+            <td>
+            <a th:href="@{/user/delete/{id}(id=${ob.id})}">DELETE</a>
+            <a th:href="@{/user/edit/{id}(id=${ob.id})}">EDIT</a>
+            </td>
+            			
+			</tr>
+		</table>
+	</form>
+	<span th:text="${msg}"></span>
+	
+</body>
+</html>
