@@ -1,0 +1,21 @@
+<html xmlns:th1="https://www.thymeleaf.org/">
+<head>
+<title>rolepage</title>
+</head>
+<body>
+<form>
+<h2>Welcome to Role Register</h2>
+<form action="save" method="POST" >
+<pre>
+
+NAME       :<input type="text" name="*{name}">
+ROLE TYPE  :<input type="text" name="*{type}">
+</pre>
+<input type="submit" value="Register">
+</form>
+<!-- read the data from model memory -->
+</form>
+<samp th1:text="${msg}"></samp>
+
+</body>
+</html>
