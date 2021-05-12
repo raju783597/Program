@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+    <head>
+    <title>USER DETAIL</title>
+    
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+ crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js
+"integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+crossorigin="anonymous">
+
+</script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+            <H1>START RIDING  PAGE </H1>
+        </div>
+        <div class="card-body">
+            <form action="save" method="POST" th:object="${persionDetail}">
+            <div class="row">
+                <div class="col-4">
+             <label for="a">      NAME    : </label> 
+                </div>
+
+                <div class="col-4">
+                    <input type="text" name="name" placeholder="Enter Name" id="a">
+                </div>
+            </div>
+
+                <div class="row">
+                    <div class="col-4">
+                    GENDER  :
+                </div>
+
+                <div class="col-4">
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-4">
+                    PICKUP  :
+                </div>
+                <div class="col-4">
+                    <input type="text" name="pickupLocation" placeholder="Current Location">
+                </div>
+             </div>
+             <div class="row">
+
+                <div class="col-4">
+                    DROP   :
+                </div>
+                <div class="col-4">
+                    <input type="text" name="dropLocation" placeholder="Destination Location">
+                </div>
+             </div>
+             <div class="row">
+
+                <div class="col-4">
+                    Choose a Vehicle:
+                </div>
+                <div class="col-4">
+                   
+                    
+                <select name="rideType" id="vehicles">    
+                    <option value="">SELECT</option>
+                    <option value="min">Mini Car</option>
+                    <option value="micro">Micro Car</option>
+                    <option value="luxarycar">Luxary Car</option>
+                    <option value="bike">Bick</option>
+                    <option value="auto">Auto</option>
+                    
+  </select>
+                </div>
+             </div>
+
+              
+          <!--  <input type="submit" class="btn btn-success" value="Submit"> -->
+                     <button name="submit" class="btn btn-success">Submit</button>
+            
+         
+           </form>
+            
+        </div>
+        <div class="card-footer bg-info text-white text-center">
+            
+            
+                <h2 th:text="${msg}"></h2>
+                
+                
+        </div>
+
+    </div>
+   
+  
+
+</div>
+
+</body>
+   
+    
+
+</html>

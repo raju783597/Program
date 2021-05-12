@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>USER DETAIL</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+	crossorigin="anonymous"></script>
+
+<!-- CSS only -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js
+"
+	integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+	crossorigin="anonymous">
+	
+</script>
+
+<style>
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="card-header bg-primary text-white text-center">
+				<H1>START DATA PAGE</H1>
+			</div>
+
+			<div class="card-body">
+				<a th:href="@{/persiondetail/pdf}" class="btn btn-warning">Export
+					PDF</a>
+			 <a th:href="@{/persiondetail/excel}" class="btn btn-warning">Export
+					Excel</a>
+                 <a th:href="@{/persiondetail/charts}" class="btn btn-warning">Chart
+					</a>
+
+
+				<form action="all" method="GET" th:object="${persionDetail}">
+
+
+					<table class="table table-hover">
+						<tr class="bg-info text-white text-center">
+							<th>ID</th>
+							<th>NAME</th>
+							<th>GENDER</th>
+							<th>PICKUP LOC</th>
+							<th>DROP LOC</th>
+							<th>VEHICEL</th>
+							<th>FARE</th>
+							<th colspan="2">OPRATION</th>
+
+						</tr>
+
+						<tr th:each="temp:${page.content}">
+							<td th:text="${temp.id}"></td>
+							<td th:text="${temp.name}"></td>
+							<td th:text="${temp.gender}"></td>
+							<td th:text="${temp.pickupLocation}"></td>
+							<td th:text="${temp.dropLocation}"></td>
+							<td th:text="${temp.rideType}"></td>
+							<td th:text="${temp.fare}"></td>
+							<td><a
+								th:href="@{/persiondetail/delete/{id}(id=${temp.id})}"
+								class="btn btn-danger">Delete </a></td>
+							<td><a th:href="@{/persiondetail/edit/{id}(id=${temp.id})}"
+								class="btn btn-warning">Edit </a></td>
+
+						</tr>
+					</table>
+					<div class="card-footer text-white bg-info text-center">
+						<h1 th:text="${msg}"></h1>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		</hr>
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				<th:block th:each="i:${#numbers.sequence(0,page.totalPages-1)}">
+					<li class="page-item"><a class="page-link" th:href="@{/persiondetail/all(page=${i})}">[[${i+ 1}]]</a></li>
+				</th:block>
+				<li class="page-item"><a class="page-link" href="#">Next</a></li>
+			</ul>
+		</nav>
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+    <head>
+    <title>USER DETAIL</title>
+    <style>
+h1{
+  text-align: center;
+   }
+   
+    </style>
+</head>
+<form action="all" method="GET" th:object="${persionDetail}">
+<body>
+    <H1>START DATA PAGE </H1>
+    <table border="1" align="center">
+    <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>GENDER</th>
+    <th>PICKUP LOC</th>
+    <th>DROP LOC</th>
+    <th>VEHICAL</th> 
+    
+    <th>FARE</th> 
+    <th>OPRATION</th> 
+    </tr>
+    <tr th:each="temp :${list}">
+    <td th:text="${temp.id}"></td>
+    <td th:text="${temp.name}"></td>
+    <td th:text="${temp.gender}"></td>
+    <td th:text="${temp.pickupLocation}"></td>
+    <td th:text="${temp.dropLocation}"></td>
+    <td th:text="${temp.rideType}"></td>
+      <td th:text="${temp.fare}"></td>
+      <td>
+      <a th:href="@{/persiondetail/delete/{id}(id=${temp.id})}">DELETE</a>
+      <a th:href="@{/persiondetail/edit/{id}(id=${temp.id})}">EDIT</a>
+      <a th:href="@{/persiondetail/pdf}">PDF</a>
+      
+      </td>
+    
+    </tr>
+    
+    
+    
+ 
+    
+    </table>
+    
+  </body>
+</form>
+<div>
+
+<h1 th:text="${msg}"></h1>
+</div>
+</html>

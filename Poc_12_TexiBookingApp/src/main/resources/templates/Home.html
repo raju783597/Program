@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org/">
+    <head>
+    <title>USER DETAIL</title>
+    
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+ rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" 
+ crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js
+"integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" 
+crossorigin="anonymous">
+
+</script>
+    <style>
+
+    </style>
+</head>
+<form action="save" method="POST" th:object="${persionDetail}">
+<body>
+    <H1>START RIDING  PAGE </H1>
+    <pre>
+     NAME    :<input type="text" name="name" placeholder="Enter Name">
+     GENDER  : <input type="radio" name="gender" value="male">Male
+             <input type="radio" name="gender" value="female">Female
+              
+    
+     PICKUP  :<input type="text" name="pickupLocation" placeholder="Current Location">
+    
+      DROP   :<input type="text" name="dropLocation" placeholder="Destination Location">
+
+      Choose a Vehicle: <select name="rideType" id="vehicles">    
+                        <option value="">SELECT</option>
+                        <option value="min">Mini Car</option>
+                        <option value="micro">Micro Car</option>
+                        <option value="luxarycar">Luxary Car</option>
+                        <option value="bike">Bick</option>
+                        <option value="auto">Auto</option>
+                        
+      </select>
+     
+      
+   
+    <button name="submit">Submit</button>
+
+</body>
+</form>
+<div>
+<h2 th:text="${msg}"></h2>
+
+</div>
+</html>
