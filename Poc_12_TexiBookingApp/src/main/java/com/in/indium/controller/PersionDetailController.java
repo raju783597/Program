@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.in.indium.iservice.IPersionService;
@@ -214,7 +215,7 @@ public class PersionDetailController {
 	System.out.println("chart location is"+location);
 	
 	//call chart method
-	//util.generateBarChart(location, list);
+	util.generateBarChart(location, list);
 	util.generatePiChart(location, list);
 	return"PersionCharts";
 		}
