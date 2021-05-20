@@ -207,7 +207,7 @@ public class PersionDetailController {
 	@GetMapping("/charts")
 	public String showPiAndChart() {
 		//DATA is show in chart
-	//List<Object[]>list=	service.persionDetailVehicelTypeCount();
+	List<Object[]>list=	service.persionDetailVehicelTypeCount1();
 	//dynamic temp folder location
 	String location= context.getRealPath("/");
 	
@@ -215,7 +215,7 @@ public class PersionDetailController {
 	
 	//call chart method
 	//util.generateBarChart(location, list);
-	//util.generatePiChart(location, list);
+	util.generatePiChart(location, list);
 	return"PersionCharts";
 		}
 		

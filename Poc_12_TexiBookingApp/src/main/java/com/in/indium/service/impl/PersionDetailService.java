@@ -83,14 +83,15 @@ public class PersionDetailService implements IPersionService {
 	}
 
 	
-	/*
-	 * @Override
-	 * 
-	 * @Transactional(readOnly=true) public List<Object[]>
-	 * persionDetailVehicelTypeCount() { // TODO return
-	 * repo.persionDetailVehicelTypeCount();
-	 * 
-	 * }
-	 */
+	
+	  @Override
+	  
+	  @Transactional(readOnly=true)
+	  public List<Object[]>
+	                     persionDetailVehicelTypeCount1() { // TODO return
+	                  return repo.persionDetailVehicelTypeCount();
+	  
+	  }
+	 
 
 }

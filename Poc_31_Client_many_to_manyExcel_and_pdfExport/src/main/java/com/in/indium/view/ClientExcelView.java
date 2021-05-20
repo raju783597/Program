@@ -3,6 +3,7 @@ package com.in.indium.view;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Consumer;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -104,22 +105,28 @@ r1.createCell(7).setCellValue("DEV_ROLE");
 			  r.createCell(2).setCellValue(cl.getCName());
 			  r.createCell(3).setCellValue(cl.getCprojName());
 			  r.createCell(4).setCellValue(" ");
-			 
-
+				/*
+				 * dev.forEach( (d)-> {
+				 * 
+				 * r.createCell(5).setCellValue(d.getDevid());
+				 * r.createCell(6).setCellValue(d.getDevName());
+				 * r.createCell(7).setCellValue(d.getDevRole()); } );
+				 */
+			  
 			  rowNum++;
 	     	}
-		for(Devloper d:dev) {
-			int row=rowNum++;
-			//int row=1;
 			
-		       r=sheet.createRow(row);
-					  r.createCell(5).setCellValue(d.getDevid());
-					  r.createCell(6).setCellValue(d.getDevName());
-					  r.createCell(7).setCellValue(d.getDevRole());
-		     
-		row++;
-			}
-			
+			  for(Devloper d:dev) { 
+				  int row=rowNum++; //int row=1;
+			  
+			  r=sheet.createRow(row);
+			  r.createCell(5).setCellValue(d.getDevid());
+			  r.createCell(6).setCellValue(d.getDevName());
+			  r.createCell(7).setCellValue(d.getDevRole());
+			  
+			  row++;
+			  }
+			 
 			  
 			
 		}

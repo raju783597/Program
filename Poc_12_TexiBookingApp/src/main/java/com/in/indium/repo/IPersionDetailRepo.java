@@ -14,5 +14,8 @@ public interface IPersionDetailRepo extends JpaRepository<PersionDetail, Integer
 
    //@Query("SELECT rideType,count(rideType) FROM PersionDetail GROUP BY rideType")
 	//public List<Object[]> persionDetailVehicelTypeCount();
+	
+	@Query("SELECT dropLocation,count(dropLocation) FROM PersionDetail  GROUP BY dropLocation")
+	public List<Object[]> persionDetailVehicelTypeCount();
 
 }

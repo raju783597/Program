@@ -25,6 +25,6 @@ public interface IPersionService {
 		//7 pagination
 		public Page<PersionDetail> getAllPersionDetail(Pageable pageable);
 		// for chart and graph fatch the data from db
-		//public List<Object[]> persionDetailVehicelTypeCount();
+		public List<Object[]> persionDetailVehicelTypeCount1();
 
 }
