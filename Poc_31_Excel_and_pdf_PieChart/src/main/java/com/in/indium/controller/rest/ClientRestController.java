@@ -33,20 +33,15 @@ public class ClientRestController {
 public	ClientService service;
 @Autowired
 public DevService devservice;
-        
-
-
-
-
-
-
-
+ 
+//excel export
 @GetMapping("/excelexport")
 public ModelAndView exportToExcel(){
 	  ModelAndView   m=new ModelAndView();
 
 	  List<Client> list =service.getAllData(); 
 	  m.setView(new ClientExcelView());
+	  
       m.addObject("obj",list); 
       //dev service
          List<Devloper> dev= devservice.getAllData();
@@ -54,7 +49,7 @@ public ModelAndView exportToExcel(){
 	  
            return m; //return ResponseEntity.ok(list);
       }
-
+//pdf export
 @GetMapping("/pdfexport")
 public ModelAndView exportPdfAll() {
 	ModelAndView m=new ModelAndView();
@@ -74,19 +69,14 @@ public ModelAndView exportPdfAll() {
 	@PostMapping("/client/insert")
 	//@requestBody get the json data and convert in to object
 	public ResponseEntity<String>SaveData(@RequestBody Client client
-			                            //  @RequestBody Devloper developer
-			                              ){
+			                            
+	    ){
 		
 		ResponseEntity<String> resp=null;
 		try {
-		// client.setDev(devloper);
-			
 		 
 		Integer id=	service.saveClient(client);
-		//Integer id1=devservice.saveDev(devloper);
 		
-		//Object id=service.saveClient(client.getDev(devloper));
-
 			resp=new ResponseEntity<String>("save with>>"+id,HttpStatus.CREATED);
 			
 		} catch (Exception e) {
@@ -97,7 +87,7 @@ public ModelAndView exportPdfAll() {
 		
 	}
 	
-	//get all
+	//get all data
 	@GetMapping("/all")
 	public ResponseEntity<List<Client>>getAll(){
 	 List<Client>  list	=service.getAllData(); 
@@ -106,7 +96,7 @@ public ModelAndView exportPdfAll() {
 	
 	 
 	
-	//delete
+	//delete by id
 	@DeleteMapping("/remove/{id}")
 	public ResponseEntity<String> delete(@PathVariable Integer id){
 		ResponseEntity<String> resp=null;

@@ -18,6 +18,7 @@ public class ClientControllerChart {
 	@Autowired	
 	public	ClientService service;
 	
+	
 	@Autowired
 	private ServletContext context;
 	

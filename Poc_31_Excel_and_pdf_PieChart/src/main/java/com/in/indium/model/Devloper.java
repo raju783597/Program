@@ -30,8 +30,10 @@ public class Devloper {
 	
 //	      @ManyToMany( cascade = CascadeType.ALL, 
 //			           mappedBy ="dev")
-//			           //  fetch = FetchType.EAGER)//if it is eager then it fach all data parents and child deta
-	 @JsonIgnore
+//	
+//  fetch = FetchType.EAGER)//if it is eager then it fach all data parents and child deta
+	
+	@JsonIgnore
 	 @ManyToMany( cascade = CascadeType.ALL, 
 	             mappedBy ="dev",
 	                fetch = FetchType.EAGER)
