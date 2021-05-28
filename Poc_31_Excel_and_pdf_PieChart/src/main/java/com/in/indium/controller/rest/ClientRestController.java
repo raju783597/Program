@@ -1,6 +1,9 @@
 package com.in.indium.controller.rest;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletContext;
 
@@ -91,9 +94,31 @@ public ModelAndView exportPdfAll() {
 	@GetMapping("/all")
 	public ResponseEntity<List<Client>>getAll(){
 	 List<Client>  list	=service.getAllData(); 
+	 
 		return ResponseEntity.ok(list);
 	}
 	
+	//get all data by name started with B only
+		@GetMapping("/startwithb")
+		public ResponseEntity<List<Client>>getAllByAlphabet(){
+		 List<Client>  list	=service.getAllData(); 
+            List<Client>list1=	list.stream()
+                        .filter(e->e.getCName().equals("tcs"))
+                        .distinct() .collect(Collectors.toList());
+		 
+			return ResponseEntity.ok(list1);
+		}
+		
+		
+		//get client company name only  one to one senirio
+		@GetMapping("/clientcompany")
+		public ResponseEntity<List<?>>getClientCompany(){
+		 List<Client>  list	=service.getAllData(); 
+	List<String>listcompantname= list.stream().map(c->c.getCName()).distinct() .collect(Collectors.toList());
+	//List<List<String>>many=list.stream().map(c1->c1.getDev().get()).collect(Collectors.toList());	 
+	
+			return ResponseEntity.ok(listcompantname);
+		}
 	 
 	
 	//delete by id
