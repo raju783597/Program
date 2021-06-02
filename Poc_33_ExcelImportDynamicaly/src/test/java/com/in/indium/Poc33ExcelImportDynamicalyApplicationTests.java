@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Poc21ExcelToDataBase2ndApproch1ApplicationTests {
+class Poc33ExcelImportDynamicalyApplicationTests {
 
 	@Test
 	void contextLoads() {
