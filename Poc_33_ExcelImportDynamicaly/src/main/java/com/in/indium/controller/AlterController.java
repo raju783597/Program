@@ -21,18 +21,16 @@ public class AlterController {
 	
 
 	@GetMapping(value ="/alter")
-	public String home(Model model) {
-	model.addAttribute("clientUser", new Alternate());
-	
-	
-	
-	List<Alternate>clientUser=aservice.findAll();
-	model.addAttribute("clientUser", clientUser);
+	public String home() {
+	//model.addAttribute("clientUser", new Alternate());//controller to ui
+	//List<Alternate>clientUser=aservice.findAll();
+	//model.addAttribute("clientUser", clientUser);
 	
 		return "Documents";		
 	}
-	@PostMapping("/fileupload1")
-	public String uploadFile(@ModelAttribute Alternate  alternate ,RedirectAttributes redirect) {
+	@PostMapping("/fileupload1")              //ui to container
+	public String uploadFile(@ModelAttribute Alternate  alternate 
+			                 ,RedirectAttributes redirect) {
 		boolean isFlag=aservice.saveDataFromUploadFile(alternate.getFiletype());
 		if(isFlag) {
 			redirect.addFlashAttribute("success","upload successfully");

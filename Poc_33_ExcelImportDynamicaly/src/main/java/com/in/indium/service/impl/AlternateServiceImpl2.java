@@ -1,21 +1,27 @@
 package com.in.indium.service.impl;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 import org.apache.commons.io.FilenameUtils;
 import org.apache.poi.hpsf.Date;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.formula.functions.T;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -24,8 +30,11 @@ import com.in.indium.model.Alternate;
 import com.in.indium.model.Profit;
 import com.in.indium.repo.AlternateRepo;
 import com.in.indium.repo.ProfitRepo;
+
+import javassist.bytecode.stackmap.BasicBlock.Catch;
+@Primary
 @Service
-public class AlternateServiceImpl implements IAlternateService {
+public class AlternateServiceImpl2 implements IAlternateService {
 
 
 	@Autowired
@@ -34,25 +43,60 @@ public class AlternateServiceImpl implements IAlternateService {
 	@Autowired
 	private ProfitRepo prepo;
 
-	/*
-	 * @Override public List<Alternate> findAll() {
-	 * 
-	 * return null; }
-	 */
+	//@Override
+	//public List<Alternate> findAll() {
+
+	//	return null;
+	//}
+	
+static	MultipartFile file1;
 
 	@Override
 	public boolean saveDataFromUploadFile(MultipartFile file) {
+		this.file1=file;
 		// TODO Auto-generated method stub
 		boolean isFlag=false;
+		//check file extention
 		String extention=FilenameUtils.getExtension(file.getOriginalFilename());
 		System.out.println(">>>>>>>"+extention);
 		
 	     if(extention.equalsIgnoreCase("xls")||extention.equalsIgnoreCase("xlsx")) {
-			isFlag=readDataFromExcel(file);
+			//read file data
+	    	 isFlag=readDataFromExcel(file);
 			System.out.println(">>>>"+isFlag);
 		}
 		return isFlag;
 	}
+	
+	
+	//get cell data
+	public static String readcellData(int vrow,int vcol) {
+		String value=null;
+		Integer no=0;
+		Workbook wb=null;
+		//get workbook 
+		wb=getWorkBook(file1);
+		//getting the sheet at index zero
+		Sheet sheet=wb.getSheetAt(0);
+		Row r=sheet.getRow(vrow);
+		Cell cell=r.getCell(vcol);	
+		
+		try {
+			value=cell.getStringCellValue();
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			 Date date=new Date();
+		value=	 cell.getLocalDateTimeCellValue().toString();
+			//no=(int) cell.getNumericCellValue();
+		 // value=String.valueOf(no);
+		}
+		
+
+		return value;
+		
+	}
+	
 	
 	
 	private boolean readDataFromExcel(MultipartFile file) {
@@ -60,14 +104,16 @@ public class AlternateServiceImpl implements IAlternateService {
 		System.out.println("from service>>>>file name"+file.getOriginalFilename());
 		System.out.println("from service>>>>file size"+file.getSize());
 		try {
-			System.out.println("from service>>>>file size"+file.getInputStream());
+			//file.getInputStream() read content of file in stream
+			System.out.println("from servicefile.getInputStream()>>>>"+file.getInputStream());
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		//get workbook
 		Workbook workbook=getWorkBook(file);
 		//getting the sheet at index zero
-		Sheet sheet=workbook.getSheetAt(0);	
+		Sheet sheet=workbook.getSheetAt(0);	//
 		Iterator<Row>rows=sheet.iterator();
 		rows.next();
 		while(rows.hasNext()) {
@@ -102,23 +148,37 @@ public class AlternateServiceImpl implements IAlternateService {
 				System.out.println(">>>>>AA>>"+clientUser.getA()); 
 			    System.out.print(">>B>>>"+clientUser.getB());
 				System.out.print(">>C>>>"+clientUser.getC());
+				//setting excelsheet data to profit class
+			      profit.setNarration(clientUser.getB());//narator 
 				
-			    profit.setNarration(clientUser.getB());//narator  
-			    
-			   List<String>listvalue=Arrays.asList(clientUser.getC());  
-				/*
-				 * List<String>filterlist=
-				 * listvalue.stream().filter(i->i.matches("Alternate/EAF"))
-				 * .collect(Collectors.toList());
-				 */
-					                      
-		  System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$"+listvalue);
-	//  profit.setDate(listvalue.get(0).replace(listvalue.get(0), "25/4/2002"));				  
-				
+			      /* allValues=lines.flatMap(Pattern.compile(" *")::splitAsStream)
+                                      .filter(s -> s.matches("[0-9]+"))
+                                      .map(Integer::valueOf)
+                                       .collect(Collectors.toList());
+					   
+					*/ 
+					 Pattern p=Pattern.compile("\\w+([0-9]+)");
+				     Matcher matcher = p.matcher(clientUser.getC().toString());
+					 if( matcher.find()) {
+						 
+						 profit.setBalance(clientUser.getC());
+					 }
 				  
-				  profit.setBalance((clientUser.getC()));	
-	//	          profit.setStrategyName("Alternate/EAF"); 
-  
+				  //row,col
+				  for(int i=2;i<3;i++) {
+ 
+					  for(int j=2;j<3;j++) {
+						  profit.setStrategyName(readcellData(j, i)); //22
+						  j++;
+						  profit.setDate(readcellData(j, i)); //32
+					  }
+
+				  }
+					/*
+					 * profit.setStrategyName(readcellData(2, 2)); profit.setDate("25/4/2002");
+					 * profit.setDate(readcellData(3, 2));
+					 */
+		           
 			prepo.save(profit);
 
 			clientUser.setFiletype(file);
@@ -128,8 +188,8 @@ public class AlternateServiceImpl implements IAlternateService {
 
 		return true;
 	}
-
-	private Workbook getWorkBook(MultipartFile file) {
+//creating workbook
+	private static Workbook getWorkBook(MultipartFile file) {
 		// TODO Auto-generated method stub
 		Workbook workbook=null;
 

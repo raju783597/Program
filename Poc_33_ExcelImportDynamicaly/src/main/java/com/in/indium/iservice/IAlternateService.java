@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.in.indium.model.Alternate;
 
 public interface IAlternateService {
-	List<Alternate> findAll();
+	//List<Alternate> findAll();
 
 	boolean saveDataFromUploadFile(MultipartFile file);
 
