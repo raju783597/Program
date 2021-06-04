@@ -9,7 +9,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="User_profile_tab")
+@Table(name="User_profile_tab_2")
 public class Profit {
 	
 	@GeneratedValue//(strategy=GenerationType.AUTO) 	

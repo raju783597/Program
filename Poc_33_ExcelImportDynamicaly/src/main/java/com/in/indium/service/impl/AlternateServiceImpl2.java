@@ -2,7 +2,7 @@ package com.in.indium.service.impl;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -157,7 +157,8 @@ static	MultipartFile file1;
                                        .collect(Collectors.toList());
 					   
 					*/ 
-					 Pattern p=Pattern.compile("\\w+([0-9]+)");
+					// Pattern p=Pattern.compile("\\w+([0-9]+)");
+					 Pattern p=Pattern.compile("\\d");//all digit[0-9]
 				     Matcher matcher = p.matcher(clientUser.getC().toString());
 					 if( matcher.find()) {
 						 
@@ -174,11 +175,22 @@ static	MultipartFile file1;
 					  }
 
 				  }
+				  
 					/*
-					 * profit.setStrategyName(readcellData(2, 2)); profit.setDate("25/4/2002");
-					 * profit.setDate(readcellData(3, 2));
+					 * // String input="25/04/2003"; Pattern
+					 * p1=Pattern.compile("[([\w:/]"); Matcher
+					 * m1=p1.matcher(clientUser.getC().toString()); if(m1.find()) {
+					 * 
+					 * profit.setDate(clientUser.getC()); //32 }
 					 */
-		           
+				   
+				  Pattern p1=Pattern.compile("[0-3][0-9]//[0-1][0-2]//[1-9][0-9]{3}");
+				  Matcher m1=p1.matcher(clientUser.getC().toString());
+				  
+				  if(m1.find()) {
+					  profit.setDate(clientUser.getC());   
+				  }
+				   
 			prepo.save(profit);
 
 			clientUser.setFiletype(file);
