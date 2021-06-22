@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -16,7 +17,7 @@ import lombok.RequiredArgsConstructor;
 @Data
 @Entity
 @RequiredArgsConstructor
-@Table(name="Ragister_tab")
+@Table(name="ragister_tab_image")
 public class Ragistration {
 	@GeneratedValue
 	@Id
@@ -31,6 +32,13 @@ public class Ragistration {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date endDate;
 	
+	@NonNull
+	@Lob//blob
+	private byte[] img;
+	
+	@NonNull
+	@Lob//clob
+	private char[] resume;
 	
 	
 	//private 
