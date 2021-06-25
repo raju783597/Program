@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Poc35ImageImportInDataBaseApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(Poc35ImageImportInDataBaseApplication.class, args);
 	}
 

@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.in.indium.model.Ragistration;
 
-public interface RagisterRepo extends JpaRepository<Ragistration, Integer> {
+public interface RagisterRepo extends JpaRepository<Ragistration, String> {
 
 }

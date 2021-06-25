@@ -4,11 +4,14 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.GenericGenerator;
 
 import lombok.Data;
 import lombok.NonNull;
@@ -19,9 +22,14 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Table(name="ragister_tab_image")
 public class Ragistration {
-	@GeneratedValue
+	
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	//custom id generator
+	@GeneratedValue(generator ="mycustom")
+	@GenericGenerator(name="mycustom",
+	 strategy = "com.in.indium.customId.RagisterCustomIdGenerator")
 	@Id
-	private Integer id;
+	private String id;
 	@NonNull
 	private String name; 
 	
