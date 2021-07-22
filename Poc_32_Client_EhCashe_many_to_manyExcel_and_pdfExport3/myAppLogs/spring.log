@@ -1,0 +1,255 @@
+2021-07-22 11:15:07,018  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 1284 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 11:15:07,022  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 11:15:07,091  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 11:15:07,092  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 11:15:08,153  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 11:15:08,241  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 11:15:09,060  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 11:15:09,071  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 11:15:09,071  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 11:15:09,299  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 11:15:09,300  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2203 ms
+ 2021-07-22 11:15:09,522  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 11:15:09,586  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 11:15:09,743  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 11:15:09,866  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 11:15:10,270  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 11:15:10,307  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 11:15:11,237  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 11:15:11,247  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 11:15:11,289  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 11:15:11,868  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 11:15:12,047  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 11:15:12,140  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 11:15:12,402  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 11:15:12,403  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 11:15:12,426  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 11:15:12,453  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 11:15:12,672  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 11:15:12,676  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 11:15:12,680  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 11:15:12,684  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 11:15:12,703  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 6.15 seconds (JVM running for 7.898)
+ 2021-07-22 11:15:42,822  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2021-07-22 11:15:42,822  INFO o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+ 2021-07-22 11:15:42,825  INFO o.s.w.s.DispatcherServlet:547 - Completed initialization in 2 ms
+ 2021-07-22 11:34:38,786  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 11:34:38,824  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 11:34:38,829  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 11:34:38,833  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 11:34:38,847  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 2021-07-22 11:36:38,588  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 1912 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 11:36:38,592  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 11:36:38,667  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 11:36:38,668  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 11:36:39,795  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 11:36:39,885  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 77 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 11:36:40,726  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 11:36:40,737  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 11:36:40,738  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 11:36:41,050  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 11:36:41,051  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2380 ms
+ 2021-07-22 11:36:41,353  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 11:36:41,434  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 11:36:41,641  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 11:36:41,799  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 11:36:42,330  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 11:36:42,371  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 11:36:43,403  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 11:36:43,415  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 11:36:43,485  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 11:36:44,396  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 11:36:44,583  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 11:36:44,724  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 11:36:45,057  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 11:36:45,059  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 11:36:45,094  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 11:36:45,141  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 11:36:45,411  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 11:36:45,415  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 11:36:45,418  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 11:36:45,422  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 11:36:45,441  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 7.34 seconds (JVM running for 11.075)
+ 2021-07-22 11:37:06,402  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2021-07-22 11:37:06,403  INFO o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+ 2021-07-22 11:37:06,405  INFO o.s.w.s.DispatcherServlet:547 - Completed initialization in 2 ms
+ 2021-07-22 11:38:40,353  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 11:38:40,391  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 11:38:40,395  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 11:38:40,399  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 11:38:40,413  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 2021-07-22 11:38:54,825  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 15260 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 11:38:54,829  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 11:38:54,909  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 11:38:54,911  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 11:39:15,825  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 7748 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 11:39:15,830  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 11:39:15,907  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 11:39:15,908  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 11:39:17,137  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 11:39:17,234  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 83 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 11:39:18,146  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 11:39:18,158  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 11:39:18,159  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 11:39:18,455  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 11:39:18,456  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2547 ms
+ 2021-07-22 11:39:18,718  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 11:39:18,786  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 11:39:18,948  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 11:39:19,087  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 13:01:34,184  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 1648 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 13:01:34,187  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 13:01:34,243  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 13:01:34,244  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 13:01:35,406  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 13:01:35,493  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 75 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 13:01:36,335  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 13:01:36,347  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 13:01:36,348  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 13:01:36,604  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 13:01:36,605  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2360 ms
+ 2021-07-22 13:01:36,827  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 13:01:36,887  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 13:01:37,043  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 13:01:37,164  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 13:01:37,580  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 13:01:37,614  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 13:01:38,557  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 13:01:38,567  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 13:01:38,611  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 13:01:39,178  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 13:01:39,354  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 13:01:39,454  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 13:01:39,715  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 13:01:39,717  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 13:01:39,739  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 13:01:39,768  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 13:01:39,989  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 13:01:39,992  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 13:01:39,997  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 13:01:40,000  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 13:01:40,020  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 6.295 seconds (JVM running for 7.784)
+ 2021-07-22 13:01:55,085  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2021-07-22 13:01:55,086  INFO o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+ 2021-07-22 13:01:55,088  INFO o.s.w.s.DispatcherServlet:547 - Completed initialization in 2 ms
+ 2021-07-22 13:34:37,784  WARN c.z.h.p.HikariPool:787 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m59s948ms280µs700ns).
+ 2021-07-22 13:43:15,357  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 13:43:15,395  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 13:43:15,398  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 13:43:15,402  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 13:43:15,410  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 2021-07-22 13:43:41,984  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 1584 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 13:43:41,987  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 13:43:42,039  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 13:43:42,040  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 13:43:43,033  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 13:43:43,110  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 13:43:43,849  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 13:43:43,859  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 13:43:43,860  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 13:43:44,099  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 13:43:44,100  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2059 ms
+ 2021-07-22 13:43:44,323  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 13:43:44,381  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 13:43:44,535  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 13:43:44,658  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 13:43:45,058  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 13:43:45,092  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 13:43:45,983  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 13:43:45,993  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 13:43:46,034  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 13:43:46,615  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 13:43:46,814  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 13:43:46,948  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 13:43:47,230  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 13:43:47,232  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 13:43:47,255  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 13:43:47,281  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 13:43:47,498  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 13:43:47,501  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 13:43:47,505  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 13:43:47,508  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 13:43:47,529  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 5.978 seconds (JVM running for 9.397)
+ 2021-07-22 13:52:12,433  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 13:52:12,472  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 13:52:12,475  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 13:52:12,479  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 13:52:12,492  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 2021-07-22 14:03:35,816  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 8688 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 14:03:35,820  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 14:03:35,870  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 14:03:35,871  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 14:03:36,858  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 14:03:36,936  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 14:03:37,701  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 14:03:37,712  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 14:03:37,713  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 14:03:37,938  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 14:03:37,938  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2066 ms
+ 2021-07-22 14:03:38,152  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 14:03:38,206  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 14:03:38,347  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 14:03:38,469  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 14:03:38,862  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 14:03:38,896  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 14:03:39,776  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 14:03:39,785  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 14:03:39,826  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 14:03:40,394  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 14:03:40,578  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 14:03:40,673  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 14:03:40,924  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 14:03:40,925  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 14:03:40,947  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 14:03:40,975  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 14:03:41,181  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 14:03:41,185  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 14:03:41,188  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 14:03:41,191  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 14:03:41,210  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 5.839 seconds (JVM running for 7.152)
+ 2021-07-22 14:03:47,301  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 14:03:47,338  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 14:03:47,344  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 14:03:47,349  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 14:03:47,362  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 2021-07-22 14:04:14,834  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:55 - Starting Poc31ClientManyToManyExcelAndPdfExportApplication using Java 15.0.2 on IND-CHN-LT10844 with PID 3320 (D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3\target\classes started by DT271 in D:\Program\Poc_32_Client_EhCashe_many_to_manyExcel_and_pdfExport3)
+ 2021-07-22 14:04:14,837  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:675 - No active profile set, falling back to default profiles: default
+ 2021-07-22 14:04:14,893  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2021-07-22 14:04:14,894  INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor:255 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2021-07-22 14:04:15,901  INFO o.s.d.r.c.RepositoryConfigurationDelegate:128 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2021-07-22 14:04:15,979  INFO o.s.d.r.c.RepositoryConfigurationDelegate:188 - Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+ 2021-07-22 14:04:16,740  INFO o.s.b.w.e.t.TomcatWebServer:108 - Tomcat initialized with port(s): 8997 (http)
+ 2021-07-22 14:04:16,753  INFO o.a.c.c.StandardService:173 - Starting service [Tomcat]
+ 2021-07-22 14:04:16,754  INFO o.a.c.c.StandardEngine:173 - Starting Servlet engine: [Apache Tomcat/9.0.45]
+ 2021-07-22 14:04:16,996  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring embedded WebApplicationContext
+ 2021-07-22 14:04:16,996  INFO o.s.b.w.s.c.ServletWebServerApplicationContext:289 - Root WebApplicationContext: initialization completed in 2101 ms
+ 2021-07-22 14:04:17,218  INFO o.h.j.i.u.LogHelper:31 - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2021-07-22 14:04:17,273  INFO o.h.Version:44 - HHH000412: Hibernate ORM core version 5.4.30.Final
+ 2021-07-22 14:04:17,414  INFO o.h.a.c.Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2021-07-22 14:04:17,534  INFO c.z.h.HikariDataSource:110 - HikariPool-1 - Starting...
+ 2021-07-22 14:04:17,907  INFO c.z.h.HikariDataSource:123 - HikariPool-1 - Start completed.
+ 2021-07-22 14:04:17,940  INFO o.h.d.Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+ 2021-07-22 14:04:18,802  INFO o.h.e.t.j.p.i.JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2021-07-22 14:04:18,811  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:437 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 14:04:18,852  INFO o.s.b.d.a.OptionalLiveReloadServer:58 - LiveReload server is running on port 35729
+ 2021-07-22 14:04:19,436  WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration:221 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+ 2021-07-22 14:04:19,604  INFO s.d.s.w.PropertySourcedRequestMappingHandlerMapping:69 - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+ 2021-07-22 14:04:19,697  INFO o.s.s.c.ThreadPoolTaskExecutor:181 - Initializing ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 14:04:19,934  INFO o.s.b.w.e.t.TomcatWebServer:220 - Tomcat started on port(s): 8997 (http) with context path ''
+ 2021-07-22 14:04:19,935  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:160 - Context refreshed
+ 2021-07-22 14:04:19,956  INFO s.d.s.w.p.DocumentationPluginsBootstrapper:163 - Found 1 custom documentation plugin(s)
+ 2021-07-22 14:04:19,984  INFO s.d.s.w.s.ApiListingReferenceScanner:41 - Scanning for api listing references
+ 2021-07-22 14:04:20,201  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: SaveDataUsingPOST_1
+ 2021-07-22 14:04:20,205  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: deleteUsingDELETE_1
+ 2021-07-22 14:04:20,208  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: getAllUsingGET_1
+ 2021-07-22 14:04:20,211  INFO s.d.s.w.r.o.CachingOperationNameGenerator:40 - Generating unique operation named: updateUsingPUT_1
+ 2021-07-22 14:04:20,231  INFO c.i.i.Poc31ClientManyToManyExcelAndPdfExportApplication:61 - Started Poc31ClientManyToManyExcelAndPdfExportApplication in 5.829 seconds (JVM running for 7.083)
+ 2021-07-22 14:04:53,792  INFO o.a.c.c.C.[.[.[/]:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2021-07-22 14:04:53,793  INFO o.s.w.s.DispatcherServlet:525 - Initializing Servlet 'dispatcherServlet'
+ 2021-07-22 14:04:53,796  INFO o.s.w.s.DispatcherServlet:547 - Completed initialization in 3 ms
+ 2021-07-22 14:16:37,094  INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin:159 - Application shutdown requested.
+ 2021-07-22 14:16:37,131  INFO o.s.s.c.ThreadPoolTaskExecutor:218 - Shutting down ExecutorService 'applicationTaskExecutor'
+ 2021-07-22 14:16:37,135  INFO o.s.o.j.LocalContainerEntityManagerFactoryBean:651 - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2021-07-22 14:16:37,140  INFO c.z.h.HikariDataSource:350 - HikariPool-1 - Shutdown initiated...
+ 2021-07-22 14:16:37,151  INFO c.z.h.HikariDataSource:352 - HikariPool-1 - Shutdown completed.
+ 
