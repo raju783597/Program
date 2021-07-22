@@ -5,6 +5,8 @@ import java.util.Optional;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -25,6 +27,7 @@ public class PersionDetailService implements IPersionService {
 	int fare=(finalposition-initial)*5;
 	@Override
 @Transactional
+@Cacheable(value ="persionDetail")
 	public Integer savePersionDetail(PersionDetail p) {
 
 		if(p.getPickupLocation().isEmpty()
@@ -41,6 +44,7 @@ public class PersionDetailService implements IPersionService {
 	}
 	// get all data
 	@Override
+	
 	public List<PersionDetail> getAllPersionDetail() {
 		return  repo.findAll();
 
@@ -58,12 +62,14 @@ public class PersionDetailService implements IPersionService {
 
 	}
 	@Override
+	@Cacheable(value ="persionDetail")
 	public Optional<PersionDetail> getOneData(Integer id) {
 		// TODO Auto-generated method stub
 		return repo.findById(id);
 
 	}
 	@Override
+	@CacheEvict(value ="persionDetail")
 	public Integer persionDetailUpdate(PersionDetail p) {
 
 
@@ -77,6 +83,7 @@ public class PersionDetailService implements IPersionService {
 
 	}
 	@Override
+	@Cacheable(value ="persionDetail")
 	public Page<PersionDetail> getAllPersionDetail(Pageable pageable) {
 
 		return repo.findAll(pageable);

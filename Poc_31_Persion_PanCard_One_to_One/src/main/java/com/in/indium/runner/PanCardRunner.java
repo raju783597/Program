@@ -21,7 +21,8 @@ public class PanCardRunner implements CommandLineRunner {
 		crepo.save(new PanCard(102,"DDHJU","A",new Date(System.currentTimeMillis())));
 		crepo.save(new PanCard(103,"DDHJU","A",new Date(System.currentTimeMillis())));
 		crepo.save(new PanCard(104,"DDHJU","A",new Date(System.currentTimeMillis())));
-				
+		System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+		System.out.println(crepo.findByPanIdGraterThan(101));
 		
 	}
 

@@ -41,6 +41,7 @@ public class PersionRunner implements CommandLineRunner {
 		p3.setPerName("kumar");
 		p3.setPerAdd("hyd");
 		p3.setCard(crepo.findByPanId(103));
+		
 		prepo.save(p3);
 		
 		//prepo.deleteById(2);

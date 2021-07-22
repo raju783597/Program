@@ -30,25 +30,26 @@ import com.in.indium.view.PersionDetailView;
 import jdk.internal.org.jline.utils.Log;
 
 @Controller
-@RequestMapping("/persiondetail")
+@RequestMapping("/persiondetail")//persiondetail//register
 public class PersionDetailController {
 
 	@Autowired
 	private IPersionService service;
-	
+
 	@Autowired
 	private ServletContext context;
-    
+
 	@Autowired
 	private PersionDetailUtility util;
 
 	//1 show login page
 	@RequestMapping("/login")
 	public String LogInPage() {
+
 		return "Login1";
 
 	}
-	
+
 	//1 show login page
 	@RequestMapping("/register")
 	public String Register(Model model) {
@@ -76,7 +77,7 @@ public class PersionDetailController {
 		model.addAttribute("msg", msg);
 		//form backing object
 		//model.addAttribute("user", new User());
-	//	return "Home";
+		//	return "Home";
 		return "Register";
 
 	}
@@ -89,15 +90,15 @@ public class PersionDetailController {
 	 * 
 	 * }
 	 */
-	 
-	//3 getall deta for pagination
-		@GetMapping("/all")
-		public String getAllData(@PageableDefault(page=0,size = 6)  Pageable pageable, Model model ) {
-			Page<PersionDetail>page=service.getAllPersionDetail(pageable);
-			model.addAttribute("page", page);
-			return "Dataoldold";
 
-		}
+	//3 getall deta for pagination
+	@GetMapping("/all")
+	public String getAllData(@PageableDefault(page=0,size = 6)  Pageable pageable, Model model ) {
+		Page<PersionDetail>page=service.getAllPersionDetail(pageable);
+		model.addAttribute("page", page);
+		return "Dataoldold";
+
+	}
 	//4 delete
 	@GetMapping("/delete/{id}")
 	public String deletePersionDetailById(@PathVariable Integer id,
@@ -125,7 +126,7 @@ public class PersionDetailController {
 			 */
 			Page<PersionDetail>page=service.getAllPersionDetail(PageRequest.of(0, 3));
 			model.addAttribute("page", page);
-			
+
 			//  page="redirect:../all";
 			page1="Dataoldold";
 			model.addAttribute("msg",id+"NOT EXIST");
@@ -147,14 +148,14 @@ public class PersionDetailController {
 		}
 
 		else { 
-			
+
 			/*
 			 * List<PersionDetail>list=service.getAllPersionDetail();
 			 * model.addAttribute("list", list);
 			 */
 			Page<PersionDetail>page=service.getAllPersionDetail(PageRequest.of(0, 6));
 			model.addAttribute("page", page);
-			
+
 			model.addAttribute("msg","DATA IS NOT FOUND of "+id);
 			page1="Dataoldold"; 
 		}
@@ -166,8 +167,8 @@ public class PersionDetailController {
 
 	@PostMapping("/update")
 	public String updated(
-		@ModelAttribute PersionDetail persionDetail
-		,Model model) {
+			@ModelAttribute PersionDetail persionDetail
+			,Model model) {
 		Integer id= service.persionDetailUpdate(persionDetail);
 		/*
 		 * List<PersionDetail>list=service.getAllPersionDetail();
@@ -175,7 +176,7 @@ public class PersionDetailController {
 		 */	
 		Page<PersionDetail>page=service.getAllPersionDetail(PageRequest.of(0, 6));
 		model.addAttribute("page", page);
-		
+
 		model.addAttribute("msg","DATA UPDATED "+id);
 		return "Dataoldold";
 
@@ -185,42 +186,42 @@ public class PersionDetailController {
 	public ModelAndView exportPdf() {
 		ModelAndView m=new ModelAndView();
 		m.setView(new PersionDetailView());
-		
-	List<PersionDetail>list=service.getAllPersionDetail();
+
+		List<PersionDetail>list=service.getAllPersionDetail();
 		m.addObject("list",list);
 		return m;
-		
+
 	}
 	// excel view
 	@GetMapping("/excel")
 	public ModelAndView exportExcel() {
 		ModelAndView m=new ModelAndView();
 		m.setView(new PersionDetailExcelView());
-		
-	List<PersionDetail>list=service.getAllPersionDetail();
+
+		List<PersionDetail>list=service.getAllPersionDetail();
 		m.addObject("list",list);
 		return m;
-		
+
 	}
-	
+
 	// generage chart
-	
+
 	@GetMapping("/charts")
 	public String showPiAndChart() {
 		//DATA is show in chart
-	List<Object[]>list=	service.persionDetailVehicelTypeCount1();
-	//dynamic temp folder location
-	String location= context.getRealPath("/");
-	
-	System.out.println("chart location is"+location);
-	
-	//call chart method
-	util.generateBarChart(location, list);
-	util.generatePiChart(location, list);
-	return"PersionCharts";
-		}
-		
-		
-		
-	
+		List<Object[]>list=	service.persionDetailVehicelTypeCount1();
+		//dynamic temp folder location
+		String location= context.getRealPath("/");
+
+		System.out.println("chart location is"+location);
+
+		//call chart method
+		util.generateBarChart(location, list);
+		util.generatePiChart(location, list);
+		return"PersionCharts";
+	}
+
+
+
+
 }
